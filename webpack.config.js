@@ -2,26 +2,27 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',  // main JS file
+  entry: './src/index.js',
   output: {
-    filename: 'main.js',    // bundled JS
     path: path.resolve(__dirname, 'dist'),
-    clean: true,            // clears old build files
+    filename: 'main.js',
+    publicPath: '/todo-list/' // ✅ important for GitHub Pages
   },
-  mode: 'development',      // 'production' for deploy
+  mode: 'development',
   devServer: {
     static: './dist',
-    port: 8080,
-    open: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // uses our html template
+      template: './src/index.html',
     }),
   ],
   module: {
     rules: [
-      { test: /\.css$/i, use: ['style-loader', 'css-loader'] }, // handles CSS
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
 };
