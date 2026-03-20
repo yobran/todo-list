@@ -1,0 +1,128 @@
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 500px;
+  padding: 20px;
+  background: white;
+  margin-top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Todos */
+.todos-container .todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.todos-container .todo-item span {
+  flex-grow: 1;
+}
+
+/* Priority Colors */
+.todos-container .todo-item.low {
+  background-color: #d0f0fd; /* light blue */
+}
+
+.todos-container .todo-item.medium {
+  background-color: #fff3b0; /* light yellow */
+}
+
+.todos-container .todo-item.high {
+  background-color: #f8d7da; /* light red */
+}
+
+/* Completed Tasks */
+.todos-container .todo-item.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Todo Buttons */
+.todos-container .todo-item button {
+  margin-left: 5px;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.todos-container .todo-item button:hover {
+  transform: scale(1.1);
+}
+
+.todos-container .todo-item button:nth-child(2) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.todos-container .todo-item button:nth-child(3) {
+  background-color: #ffc107;
+  color: black;
+}
+
+.todos-container .todo-item button:nth-child(4) {
+  background-color: #f44336;
+  color: white;
+}
+.projects-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.projects-container select,
+.projects-container button {
+  padding: 6px 10px;
+  font-size: 14px;
+}
